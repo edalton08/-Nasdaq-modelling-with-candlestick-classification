@@ -188,7 +188,7 @@ print(valid_candles['Location_pct'].dtype)
 sns.countplot(data=valid_candles, x='Location_label', color='turquoise')
 plt.show()
 
-#Count plot to analyse the distribution of Location percentages
+#Count plot to analyse the distribution of Location percentages labels
 ordered_labels = ['0-10', '10-20', '20-30', '30-40', '40-50', 
                   '50-60', '60-70', '70-80', '80-90', '90-100']
 valid_candles['Location_label'] = pd.Categorical(
@@ -691,7 +691,6 @@ gap_results_df['Date'] = valid_candles['Date'].iloc[-len(gap_results_df):].reset
 gap_r2 = r2_score(gap_y_test_inverse, inversed_gap_preds)
 print(f"R² Score: {gap_r2:.4f}")
 
-### PCT results
 
 
 
